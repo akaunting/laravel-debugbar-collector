@@ -60,8 +60,8 @@ class AkauntingCollector extends DataCollector implements DataCollectorInterface
             $modules[$module->alias] = [
                 'Installed Version' => module($module->alias)->get('version'),
                 'Latest Version' => isset($versions[$module->alias]) ? $versions[$module->alias] : 'N/A',
-                'Is Enabled' => $module->enabled,
-                'Is Exists' => $this->moduleExists($module->alias),
+                'Enabled' => $module->enabled,
+                'Exists' => $this->moduleExists($module->alias),
             ];
         });
 
