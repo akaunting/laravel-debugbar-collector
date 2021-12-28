@@ -1,0 +1,58 @@
+{
+    "name": "akaunting/laravel-debugbar-collector",
+    "description": "Adding Akaunting tab to the Laravel Debugbar",
+    "keywords": [
+        "akaunting",
+        "debugbar"
+    ],
+    "homepage": "https://github.com/akaunting/debugbar",
+    "license": "MIT",
+    "version": "1.0.0",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Denis Duliçi",
+            "email": "denis@akaunting.com",
+            "homepage": "https://akaunting.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Sevan Nerse",
+            "email": "sevan@akaunting.com",
+            "homepage": "https://akaunting.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.3.0",
+        "barryvdh/laravel-debugbar": "^3.6"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Akaunting\\DebugbarCollector\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Akaunting\\DebugbarCollector\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Akaunting\\DebugbarCollector\\Provider"
+            ]
+        }
+    }
+}
