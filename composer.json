@@ -5,7 +5,7 @@
         "akaunting",
         "debugbar"
     ],
-    "homepage": "https://github.com/akaunting/debugbar",
+    "homepage": "https://github.com/akaunting/laravel-debugbar-collector",
     "license": "MIT",
     "version": "1.0.0",
     "type": "library",
