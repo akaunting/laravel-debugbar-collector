@@ -1,14 +1,12 @@
 {
     "name": "akaunting/laravel-debugbar-collector",
-    "description": "Adding Akaunting tab to the Laravel Debugbar",
+    "description": "Laravel Debugbar collector package for Akaunting",
     "keywords": [
         "akaunting",
+        "laravel",
         "debugbar"
     ],
-    "homepage": "https://github.com/akaunting/laravel-debugbar-collector",
     "license": "MIT",
-    "version": "1.0.0",
-    "type": "library",
     "authors": [
         {
             "name": "Denis Duliçi",
