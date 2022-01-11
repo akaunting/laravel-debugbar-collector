@@ -57,11 +57,13 @@ class AkauntingCollector extends DataCollector implements DataCollectorInterface
         Module::all(['alias', 'enabled'])->each(function ($module) use (&$modules) {
             $versions = Cache::get('versions');
 
+            $exists = $this->moduleExists($module->alias);
+
             $modules[$module->alias] = [
-                'Installed Version' => module($module->alias)->get('version'),
+                'Installed Version' => $exists ? module($module->alias)->get('version') : 'N/A',
                 'Latest Version' => isset($versions[$module->alias]) ? $versions[$module->alias] : 'N/A',
                 'Enabled' => $module->enabled,
-                'Exists' => $this->moduleExists($module->alias),
+                'Exists' => $exists,
             ];
         });
 
