@@ -36,19 +36,19 @@ class AkauntingCollector extends DataCollector implements DataCollectorInterface
         $company_date_format = company_date_format() . ' (' . company_date(Date::createFromTimestamp(0)) . ')';
 
         if ($account_id = setting('default.account', null)) {
-            $default_account = Account::find($account_id)->getAttributes();
+            $default_account = Account::find($account_id)?->getAttributes();
         }
 
         if ($currency_code = setting('default.currency')) {
-            $default_currency = Currency::code($currency_code)->first()->getAttributes();
+            $default_currency = Currency::code($currency_code)->first()?->getAttributes();
         }
 
         if ($income_category_id = setting('default.income_category', null)) {
-            $default_income_category = Category::find($income_category_id)->getAttributes();
+            $default_income_category = Category::find($income_category_id)?->getAttributes();
         }
 
         if ($expense_category_id = setting('default.expense_category', null)) {
-            $default_expense_category = Category::find($expense_category_id)->getAttributes();
+            $default_expense_category = Category::find($expense_category_id)?->getAttributes();
         }
 
         $default_locale = setting('default.locale');
