@@ -2,7 +2,6 @@
 
 ![Downloads](https://img.shields.io/packagist/dt/akaunting/laravel-debugbar-collector)
 [![StyleCI](https://github.styleci.io/repos/442390293/shield?style=flat&branch=master)](https://styleci.io/repos/442390293)
-[![Quality](https://img.shields.io/scrutinizer/quality/g/akaunting/laravel-debugbar-collector?label=quality)](https://scrutinizer-ci.com/g/akaunting/laravel-debugbar-collector)
 [![License](https://img.shields.io/github/license/akaunting/laravel-debugbar-collector)](LICENSE.md)
 
 This package aims to provide additional information about the Akaunting installation, versions, and server details.
