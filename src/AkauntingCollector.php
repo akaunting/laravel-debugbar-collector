@@ -29,9 +29,9 @@ class AkauntingCollector extends DataCollector implements DataCollectorInterface
         $default_income_category = $default_expense_category = [];
 
         $info = Info::all();
-        $akaunting_version = $info['akaunting'];
-        $total_companies = $info['companies'];
-        $total_users = $info['users'];
+        $akaunting_version = ! empty($info['akaunting']) ? $info['akaunting'] : '0.0.0';
+        $total_companies = ! empty($info['companies']) ? $info['companies'] : '0';
+        $total_users = ! empty($info['users']) ? $info['users'] : '0';
         $company_id = company_id();
         $company_date_format = company_date_format() . ' (' . company_date(Date::createFromTimestamp(0)) . ')';
 

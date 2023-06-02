@@ -22,8 +22,8 @@ class ServerCollector extends DataCollector implements DataCollectorInterface, R
         $requirements = Installer::checkServerRequirements();
 
         return [
-            'PHP' => $versions['php'],
-            'MySQL' => $versions['mysql'],
+            'PHP' => ! empty($info['php']) ? $info['php'] : '0.0.0',
+            'MySQL' => ! empty($info['mysql']) ? $info['mysql'] : '0.0.0',
             'Memory Limit' => ini_get('memory_limit'),
             'Execution Time' => ini_get('max_execution_time'),
             'PHP OS' => PHP_OS,
